@@ -10,6 +10,8 @@ public:
 
     void print();
 
+    void validate();
+
     Sort();
 
     ~Sort();

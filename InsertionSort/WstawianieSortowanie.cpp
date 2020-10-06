@@ -10,6 +10,8 @@ int main(){
     sort.sortInstert();
     // Show array contents after sort
     sort.print();
+    // Check if array is sorted
+    sort.validate();
 
     // Block console
     system("pause");

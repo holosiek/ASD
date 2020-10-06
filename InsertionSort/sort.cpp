@@ -23,6 +23,22 @@ void Sort::print(){
     std::cout << "\n";
 }  
 
+// Check if array is sorted
+void Sort::validate(){
+    bool sorted = true;
+    for(int i=1; i<size; i++){
+        if(arr[i-1] > arr[i]){
+            sorted = false;
+            break;
+        }
+    }
+    if(sorted){
+        std::cout << "\nTablica jest posortowana!\n";
+    } else {
+        std::cout << "\nTablica nie jest posortowana!\n";
+    }
+}  
+
 // Create array
 Sort::Sort(){
     std::cout << "Wpisz ilosc elementow, a nastepnie podaj te elementy (liczby)\n";
