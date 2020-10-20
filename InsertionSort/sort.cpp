@@ -20,34 +20,36 @@ void Sort::merge(int a_l, int a_pivot, int a_r){
     int t_rightsize = a_r-a_pivot; 
     int a = 0;
     int b = 0;
-    int c = a_l;
+    int iter = a_l;
 
     int* t_leftarr = new int[t_leftsize];
     int* t_rightarr = new int[t_rightsize]; 
     //----------------------------------------
-    for(int i = 0; i < t_leftsize; i++){
+    for(int i=0; i<t_leftsize; i++){
         t_leftarr[i] = arr[a_l+i]; 
     }
-    for(int j = 0; j < t_rightsize; j++){
+    for(int j=0; j<t_rightsize; j++){
         t_rightarr[j] = arr[a_pivot+1+j];
     }
     //----------------------------------------
     while(a < t_leftsize && b < t_rightsize){ 
         if(t_leftarr[a] <= t_rightarr[b]){ 
-            arr[c] = t_leftarr[a]; 
+            arr[iter] = t_leftarr[a]; 
             a++; 
         } else { 
-            arr[c] = t_rightarr[b]; 
+            arr[iter] = t_rightarr[b]; 
             b++; 
         } 
-        c++; 
+        iter++; 
     } 
     while(a < t_leftsize){ 
-        arr[c] = t_leftarr[a]; a++; c++; 
+        arr[iter] = t_leftarr[a];
+        a++; iter++; 
     } 
 
     while(b < t_rightsize){ 
-        arr[c] = t_rightarr[b]; b++; c++; 
+        arr[iter] = t_rightarr[b];
+        b++; iter++; 
     } 
     //----------------------------------------
     delete[] t_leftarr, t_rightarr;
@@ -57,12 +59,14 @@ void Sort::sortMerge(int a_l, int a_r){
     if(a_r == -1){
         a_r = size-1;
     }
-    if(a_l < a_r){ 
-        int t_pivot = (a_l+a_r)/2; 
-        sortMerge(a_l, t_pivot); 
-        sortMerge(t_pivot+1, a_r);
-        merge(a_l, t_pivot, a_r); 
-    } 
+    if(size > 1){
+        if(a_l < a_r){ 
+            int t_pivot = (a_l+a_r)/2; 
+            sortMerge(a_l, t_pivot); 
+            sortMerge(t_pivot+1, a_r);
+            merge(a_l, t_pivot, a_r); 
+        } 
+    }
 }
 
 // Display array
