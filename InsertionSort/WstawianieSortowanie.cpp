@@ -7,7 +7,7 @@ int main(){
     // Show array contents before sort
     sort.print();
     // Sort
-    sort.sortInstert();
+    sort.sortMerge();
     // Show array contents after sort
     sort.print();
     // Check if array is sorted
