@@ -1,8 +1,22 @@
 #include <iostream>
+#include <algorithm>
 #include "sort.hpp" 
+#include "HeapSort.hpp" 
+
+// Heap Sort
+void Sort::sortHeap(Kopiec* a_kopiec, int a_n){
+    for(int i=(a_n>>1)-1; i>=0; i--){
+        a_kopiec->heapify(a_n, i); 
+    }
+
+    for(int i=a_n-1; i>0; i--){
+        std::swap(a_kopiec->getArrPointer()[0], a_kopiec->getArrPointer()[i]); 
+        a_kopiec->heapify(i, 0); 
+    } 
+} 
 
 // Insertion sort
-void Sort::sortInstert(){
+void Sort::sortInsert(){
     for(int j=1; j<size; j++){
         int elem = arr[j];
         int i = j-1;
