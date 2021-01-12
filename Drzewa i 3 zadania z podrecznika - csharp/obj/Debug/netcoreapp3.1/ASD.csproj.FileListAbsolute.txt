@@ -1,0 +1,13 @@
+C:\Users\Holo\RiderProjects\ASD\ASD\bin\Debug\netcoreapp3.1\ASD.exe
+C:\Users\Holo\RiderProjects\ASD\ASD\bin\Debug\netcoreapp3.1\ASD.deps.json
+C:\Users\Holo\RiderProjects\ASD\ASD\bin\Debug\netcoreapp3.1\ASD.runtimeconfig.json
+C:\Users\Holo\RiderProjects\ASD\ASD\bin\Debug\netcoreapp3.1\ASD.runtimeconfig.dev.json
+C:\Users\Holo\RiderProjects\ASD\ASD\bin\Debug\netcoreapp3.1\ASD.dll
+C:\Users\Holo\RiderProjects\ASD\ASD\bin\Debug\netcoreapp3.1\ASD.pdb
+C:\Users\Holo\RiderProjects\ASD\ASD\obj\Debug\netcoreapp3.1\ASD.csprojAssemblyReference.cache
+C:\Users\Holo\RiderProjects\ASD\ASD\obj\Debug\netcoreapp3.1\ASD.AssemblyInfoInputs.cache
+C:\Users\Holo\RiderProjects\ASD\ASD\obj\Debug\netcoreapp3.1\ASD.AssemblyInfo.cs
+C:\Users\Holo\RiderProjects\ASD\ASD\obj\Debug\netcoreapp3.1\ASD.csproj.CoreCompileInputs.cache
+C:\Users\Holo\RiderProjects\ASD\ASD\obj\Debug\netcoreapp3.1\ASD.dll
+C:\Users\Holo\RiderProjects\ASD\ASD\obj\Debug\netcoreapp3.1\ASD.pdb
+C:\Users\Holo\RiderProjects\ASD\ASD\obj\Debug\netcoreapp3.1\ASD.genruntimeconfig.cache
