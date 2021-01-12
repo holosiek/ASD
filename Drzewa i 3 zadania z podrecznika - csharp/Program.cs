@@ -5,6 +5,15 @@ namespace ASD
 {
     internal static class Program
     {
+        private const string Separator = "---------------------";
+
+        public static void AddHeader(string header)
+        {
+            Console.WriteLine("\n"+Separator);
+            Console.WriteLine(">>> " + header);
+            Console.WriteLine(Separator);
+        }
+        
         private static void TestyDrzew()
         {
             int[] pre = { 10, 5, 1, 7, 40, 50, -5, 1929 };
@@ -27,60 +36,67 @@ namespace ASD
 
         private static void TestStrukturyA()
         {
+            var arr = new[]{5, 5, 1, 0, 10};
             var struktA = new StrukturaA(10);
+
+            AddHeader("Struktura A - 1.28 z podrecznika");
             Console.WriteLine(StrukturaA.Search(1, struktA));
             Console.WriteLine(StrukturaA.Search(-5, struktA));
-            Console.WriteLine(StrukturaA.Insert(5, struktA));
-            Console.WriteLine(StrukturaA.Insert(5, struktA));
-            Console.WriteLine(StrukturaA.Insert(1, struktA));
-            Console.WriteLine(StrukturaA.Insert(0, struktA));
-            Console.WriteLine(StrukturaA.Insert(10, struktA));
+            
+            foreach (int val in arr)
+            {
+                Console.WriteLine(StrukturaA.Insert(val, struktA));
+            }
+            
             Console.WriteLine(StrukturaA.Search(10, struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Insert(5, struktA));
-            Console.WriteLine(StrukturaA.Insert(5, struktA));
-            Console.WriteLine(StrukturaA.Insert(1, struktA));
-            Console.WriteLine(StrukturaA.Insert(0, struktA));
-            Console.WriteLine(StrukturaA.Insert(10, struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
-            Console.WriteLine(StrukturaA.Select(struktA));
+            
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(StrukturaA.Select(struktA));
+            }
+            
+            foreach (int val in arr)
+            {
+                Console.WriteLine(StrukturaA.Insert(val, struktA));
+            }
+            
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(StrukturaA.Select(struktA));
+            }
         }
 
         private static void TestStrukturyB()
         {
             var struktB = new StrukturaB(10);
-            Console.WriteLine(StrukturaB.Push(5, struktB));
-            Console.WriteLine(StrukturaB.Push(5, struktB));
-            Console.WriteLine(StrukturaB.Push(3, struktB));
-            Console.WriteLine(StrukturaB.Push(1, struktB));
-            Console.WriteLine(StrukturaB.Push(1, struktB));
-            Console.WriteLine(StrukturaB.Pop(struktB));
-            Console.WriteLine(StrukturaB.Pop(struktB));
-            Console.WriteLine(StrukturaB.Pop(struktB));
-            Console.WriteLine(StrukturaB.Pop(struktB));
-            Console.WriteLine(StrukturaB.Pop(struktB));
-            Console.WriteLine("---------");
-            Console.WriteLine(StrukturaB.Push(5, struktB));
-            Console.WriteLine(StrukturaB.Push(3, struktB));
-            Console.WriteLine(StrukturaB.Push(1, struktB));
-            Console.WriteLine("---------");
+            var arr = new[]{5, 5, 3, 1, 1};
+            
+            AddHeader("Struktura B - 1.29 z podrecznika");
+            foreach (int val in arr)
+            {
+                Console.WriteLine(StrukturaB.Push(val, struktB));
+            }
+            
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(StrukturaB.Pop(struktB));
+            }
+            
+            foreach (int val in arr)
+            {
+                Console.WriteLine(StrukturaB.Push(val, struktB));
+            }
+            
             for (int i = 0; i < 12; i++)
             {
                 Console.WriteLine(StrukturaB.Search(i, struktB));
             }
-            Console.WriteLine("---------");
+            
             for (int i = 0; i < 6; i++)
             {
                 Console.WriteLine(StrukturaB.Delete(i, struktB));
             }
-            Console.WriteLine("---------");
+            
             for (int i = 0; i < 6; i++)
             {
                 Console.WriteLine(StrukturaB.Search(i, struktB));
@@ -90,6 +106,8 @@ namespace ASD
         private static void TestStrukturyC()
         {
             var struktC = new StrukturaC();
+            
+            AddHeader("Struktura C - 1.30 z podrecznika");
             StrukturaC.Push(5, struktC);
             StrukturaC.Print(struktC);
             StrukturaC.Push(6, struktC);
@@ -151,6 +169,7 @@ namespace ASD
         {
             TestyDrzew();
             TestyStruktur();
+            string holdConsole = Console.ReadLine();
         }
     }
 }

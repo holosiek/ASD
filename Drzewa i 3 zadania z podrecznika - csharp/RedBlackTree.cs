@@ -89,7 +89,7 @@ namespace ASD
         
         public void Print()
         {
-            Console.Write("RedBlackTree:\n");
+            Program.AddHeader("RedBlackTree");
             InOrder(Root);
             Console.Write("\n");
         }

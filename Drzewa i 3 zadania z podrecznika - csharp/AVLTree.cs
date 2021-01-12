@@ -126,7 +126,7 @@ namespace ASD
 
         public void Print(Node node)
         {
-            Console.Write("AVLTree:\n");
+            Program.AddHeader("AVLTree");
             PreOrder(node);
             Console.Write("\n");
         }

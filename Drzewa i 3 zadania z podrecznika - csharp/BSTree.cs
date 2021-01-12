@@ -160,7 +160,7 @@ namespace ASD
 
         public void Print(Action<Node> type, Node parent)
         {
-            Console.Write("BSTree:\n");
+            Program.AddHeader("BSTree");
             type.Invoke(parent);
             Console.Write("\n");
         }
