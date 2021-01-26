@@ -1,9 +1,10 @@
 ﻿using System;
+using ASD.Sortowania;
 using ASD.Struktury;
 
 namespace ASD
 {
-    internal static class Program
+    internal static partial class Program
     {
         private const string Separator = "---------------------";
 
@@ -164,12 +165,38 @@ namespace ASD
             TestStrukturyB();
             TestStrukturyC();
         }
-        
-        public static void Main(string[] args)
+
+        private static void TestyInsertionSort()
         {
-            TestyDrzew();
-            TestyStruktur();
-            string holdConsole = Console.ReadLine();
+            var arr = new[] {1, 6, 1, 7, 16, 83, 616, 2, 0, 155};
+            var insSort = new InsertionSort(arr, arr.Length);
+            
+            AddHeader("Insertion Sort");
+            insSort.Print();
+            insSort.Sort();
+            insSort.Print();
+        }
+        
+        private static void TestyMergeSort()
+        {
+            var arr = new[] {1, 6, 1, 7, 16, 83, 616, 2, 0, 155};
+            var mergeSort = new MergeSort(arr, arr.Length);
+            
+            AddHeader("Merge Sort");
+            mergeSort.Print();
+            mergeSort.Sort();
+            mergeSort.Print();
+        }
+        
+        private static void TestyHeapSort()
+        {
+            var arr = new[] {1, 6, 1, 7, 16, 83, 616, 2, 0, 155};
+            var heapSort = new HeapSort(arr, arr.Length);
+            
+            AddHeader("Heap Sort");
+            heapSort.Print();
+            heapSort.Sort();
+            heapSort.Print();
         }
     }
 }
